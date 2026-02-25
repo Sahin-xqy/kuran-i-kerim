@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* 2. HEADER (ÜST ALAN) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: blue;
+    font-family: Cinzel serif, Georgia, serif;
+}
+
+.header-section.left {
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ana-logo {
+    height: 80px;
+    width: auto;
+    border-radius: 7px;
+}
+header .header-section.center h1 {
+    font-family: 'Cinzel', serif; /* Font ailesi */
+    font-weight: 900; /* Çok kalın */
+    font-size: 3em; /* Daha büyük boyut */
+    letter-spacing: 3px; /* Harfler arası hafif boşluk */
+    color: white; /* Saygın, koyu bir kahve tonu */
+    text-transform: uppercase; /* Tüm harfleri büyük yap */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Hafif gölge efekti */
+    margin: 0;
+}
+
+.header-section .sag-resim {
+    height: 130px;
+    width: 400px;
+    margin: 15px;
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+/* 3. NAVİGASYON (MENÜ) */
+nav {
+    background-color: #40E0D0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul li a:hover {
+    color: #000;
+    background-color: #d4af37;
+}
+
+/* 4. ANA YERLEŞİM (LAYOUT) */
+main {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+.main-content {
+    flex: 2;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.main-content img {
+    width: 100%;
+    height: auto; /* Oran bozulmaması için auto daha sağlıklıdır */
+    display: block;
+    border-radius: 8px;
+}
+
+/* 5. SAĞ SÜTUN VE SURE TABLOSU */
+.kuransureleri {
+    background-color: #1f1f1f;
+    color: #40E0D0;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+}
+
+.tablo-penceresi {
+    height: 400px;
+    overflow-y: auto;
+    border: 2px solid #1f1f1f;
+    background: #fff;
+    text-align: center;
+}
+
+/* Tablo Sütunlarını Yakınlaştıran Ayar */
+.sag-sutun-tablo {
+    width: auto; 
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.sag-sutun-tablo th, 
+.sag-sutun-tablo td {
+    padding: 6px 8px; /* Sütunlar arası ideal yakınlık */
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.sag-sutun-tablo th {
+    background: #f8f8f8;
+    color: #1f1f1f;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sag-sutun-tablo tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Linkler ve Butonlar */
+.tablo-link {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+.detay-buton {
+    background-color: #40E0D0;
+    color: #1f1f1f;
+    padding: 2px 6px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.detay-buton:hover {
+    background-color: #1f1f1f;
+    color: #40E0D0;
+}
+
+/* Kaydırma Çubuğu (Scrollbar) Tasarımı */
+.tablo-penceresi::-webkit-scrollbar {
+    width: 6px;
+}
+.tablo-penceresi::-webkit-scrollbar-thumb {
+    background: #40E0D0;
+    border-radius: 10px;
+}
+
+/* 6. VİDEO ALANI */
+.video-konteynir {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.video-baslik {
+    text-align: center;
+    color: #1f1f1f;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #40E0D0;
+    padding-bottom: 5px;
+}
+
+.video-cerceve {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Oranı */
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.video-cerceve iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 7. İÇERİK BÖLÜMLERİ VE FOOTER */
+.sure-bolumu {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+}
+
+.sure-bolumu h2 {
+    color: #1f1f1f;
+    border-bottom: 2px solid #40E0D0;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    color: blue;
+}
+
+.video-konteynir {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+/* Sol sütundaki video için özel ayar */
+.sidebar .video-konteynir {
+    margin-top: 20px;
+    padding: 10px; /* Biraz daha daralttık */
+    background-color: #fff; /* Gri zemin üzerinde beyaz kutu şık durur */
+    border: 1px solid #ccc;
+}
+
+.sidebar .video-baslik {
+    font-size: 14px; /* Başlığı dar alan için küçülttük */
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+iframe {
+    background-color: #ccc5ac;
+    color: blueviolet;
+}
+
